@@ -17,7 +17,8 @@ namespace apCaesarsCipher
             InitializeComponent();
         }
 
-        string[] alphabet = new string[] {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
+        string[] alphabet_lower = new string[] {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
+        string[] alphabet_upper = new string[] {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
 
         private void btnEncode_Click(object sender, EventArgs e)
         {
@@ -31,29 +32,42 @@ namespace apCaesarsCipher
 
                 if (cbKey.SelectedItem != null)
                 {
-                    if (int.TryParse(cbKey.SelectedItem.ToString(), out key))
+                    if (int.TryParse(cbKey.SelectedItem.ToString(), out key)) // Verfiying if key is valid
                     {
                         if (key < 1 || key > 25)
                             MessageBox.Show("Invalid Key!");
                         else
                         {
                             string ret = "";
-                            passed_string = passed_string.ToLower();
-                            foreach (char letter in passed_string)
+                            foreach (char letter in passed_string) 
                             {
-                                if (Char.IsLetter(letter))
+                                if (Char.IsLetter(letter)) // For each char in passed string test whether is a letter or not
                                 {
-                                    string let = Char.ToString(letter);
-                                    int alphabet_letter_index = Array.IndexOf(alphabet, let);
-                                    int new_index = alphabet_letter_index + key;
+                                    if (Char.IsLower(letter)) // If it is in lowercase
+                                    {
+                                        string let = Char.ToString(letter); // Convert to string
+                                        int alphabet_letter_index = Array.IndexOf(alphabet_lower, let); // Get the index of the letter in the alphabet
+                                        int new_index = alphabet_letter_index + key; // Add the key to the index
 
-                                    if (new_index >= alphabet.Length)
-                                        new_index = new_index - alphabet.Length;
+                                        if (new_index >= alphabet_lower.Length) // If it is higher than the limit
+                                            new_index = new_index - alphabet_lower.Length; // Start from beginning
 
-                                    ret += alphabet[new_index];
+                                        ret += alphabet_lower[new_index]; // Add the new letter to the string that is going to be returned
+                                    }
+                                    else // If it is in uppercase
+                                    {
+                                        string let = Char.ToString(letter); // Convert to string
+                                        int alphabet_letter_index = Array.IndexOf(alphabet_upper, let); // Get the index of the letter in the alphabet
+                                        int new_index = alphabet_letter_index + key; // Add the key to the index
+
+                                        if (new_index >= alphabet_upper.Length) // If it is higher than the limit
+                                            new_index = new_index - alphabet_upper.Length; // Start from beginning
+
+                                        ret += alphabet_upper[new_index]; // Add the new letter to the string that is going to be returned
+                                    }
                                 }
                                 else
-                                    ret += letter;
+                                    ret += letter; // If is not a letter (numbers, symbols, spaces)
                             }
 
                             lbResult.Text = ret;
