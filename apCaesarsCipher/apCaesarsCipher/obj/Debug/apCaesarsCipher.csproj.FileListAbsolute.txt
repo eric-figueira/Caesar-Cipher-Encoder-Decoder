@@ -20,3 +20,14 @@ Z:\GITHUB\MeusProjetos\Caesar-Cipher-Encoder-Decoder\apCaesarsCipher\apCaesarsCi
 Z:\GITHUB\MeusProjetos\Caesar-Cipher-Encoder-Decoder\apCaesarsCipher\apCaesarsCipher\obj\Debug\apCaesarsCipher.csproj.CoreCompileInputs.cache
 Z:\GITHUB\MeusProjetos\Caesar-Cipher-Encoder-Decoder\apCaesarsCipher\apCaesarsCipher\obj\Debug\apCaesarsCipher.exe
 Z:\GITHUB\MeusProjetos\Caesar-Cipher-Encoder-Decoder\apCaesarsCipher\apCaesarsCipher\obj\Debug\apCaesarsCipher.pdb
+D:\downloads\GITHUB\Meus projetos\caesers-cipher-encoder-decoder\Caesar-Cipher-Encoder-Decoder\apCaesarsCipher\apCaesarsCipher\bin\Debug\apCaesarsCipher.exe.config
+D:\downloads\GITHUB\Meus projetos\caesers-cipher-encoder-decoder\Caesar-Cipher-Encoder-Decoder\apCaesarsCipher\apCaesarsCipher\bin\Debug\apCaesarsCipher.exe
+D:\downloads\GITHUB\Meus projetos\caesers-cipher-encoder-decoder\Caesar-Cipher-Encoder-Decoder\apCaesarsCipher\apCaesarsCipher\bin\Debug\apCaesarsCipher.pdb
+D:\downloads\GITHUB\Meus projetos\caesers-cipher-encoder-decoder\Caesar-Cipher-Encoder-Decoder\apCaesarsCipher\apCaesarsCipher\obj\Debug\apCaesarsCipher.csproj.AssemblyReference.cache
+D:\downloads\GITHUB\Meus projetos\caesers-cipher-encoder-decoder\Caesar-Cipher-Encoder-Decoder\apCaesarsCipher\apCaesarsCipher\obj\Debug\apCaesarsCipher.csproj.SuggestedBindingRedirects.cache
+D:\downloads\GITHUB\Meus projetos\caesers-cipher-encoder-decoder\Caesar-Cipher-Encoder-Decoder\apCaesarsCipher\apCaesarsCipher\obj\Debug\apCaesarsCipher.frmCifra.resources
+D:\downloads\GITHUB\Meus projetos\caesers-cipher-encoder-decoder\Caesar-Cipher-Encoder-Decoder\apCaesarsCipher\apCaesarsCipher\obj\Debug\apCaesarsCipher.Properties.Resources.resources
+D:\downloads\GITHUB\Meus projetos\caesers-cipher-encoder-decoder\Caesar-Cipher-Encoder-Decoder\apCaesarsCipher\apCaesarsCipher\obj\Debug\apCaesarsCipher.csproj.GenerateResource.cache
+D:\downloads\GITHUB\Meus projetos\caesers-cipher-encoder-decoder\Caesar-Cipher-Encoder-Decoder\apCaesarsCipher\apCaesarsCipher\obj\Debug\apCaesarsCipher.csproj.CoreCompileInputs.cache
+D:\downloads\GITHUB\Meus projetos\caesers-cipher-encoder-decoder\Caesar-Cipher-Encoder-Decoder\apCaesarsCipher\apCaesarsCipher\obj\Debug\apCaesarsCipher.exe
+D:\downloads\GITHUB\Meus projetos\caesers-cipher-encoder-decoder\Caesar-Cipher-Encoder-Decoder\apCaesarsCipher\apCaesarsCipher\obj\Debug\apCaesarsCipher.pdb
