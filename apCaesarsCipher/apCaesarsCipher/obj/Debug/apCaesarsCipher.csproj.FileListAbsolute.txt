@@ -31,3 +31,14 @@ D:\downloads\GITHUB\Meus projetos\caesers-cipher-encoder-decoder\Caesar-Cipher-E
 D:\downloads\GITHUB\Meus projetos\caesers-cipher-encoder-decoder\Caesar-Cipher-Encoder-Decoder\apCaesarsCipher\apCaesarsCipher\obj\Debug\apCaesarsCipher.csproj.CoreCompileInputs.cache
 D:\downloads\GITHUB\Meus projetos\caesers-cipher-encoder-decoder\Caesar-Cipher-Encoder-Decoder\apCaesarsCipher\apCaesarsCipher\obj\Debug\apCaesarsCipher.exe
 D:\downloads\GITHUB\Meus projetos\caesers-cipher-encoder-decoder\Caesar-Cipher-Encoder-Decoder\apCaesarsCipher\apCaesarsCipher\obj\Debug\apCaesarsCipher.pdb
+Z:\GITHUB\MeusProjetos\Caesar-Cipher-Encoder-Decoder\Caesar-Cipher-Encoder-Decoder\apCaesarsCipher\apCaesarsCipher\bin\Debug\apCaesarsCipher.exe.config
+Z:\GITHUB\MeusProjetos\Caesar-Cipher-Encoder-Decoder\Caesar-Cipher-Encoder-Decoder\apCaesarsCipher\apCaesarsCipher\bin\Debug\apCaesarsCipher.exe
+Z:\GITHUB\MeusProjetos\Caesar-Cipher-Encoder-Decoder\Caesar-Cipher-Encoder-Decoder\apCaesarsCipher\apCaesarsCipher\bin\Debug\apCaesarsCipher.pdb
+Z:\GITHUB\MeusProjetos\Caesar-Cipher-Encoder-Decoder\Caesar-Cipher-Encoder-Decoder\apCaesarsCipher\apCaesarsCipher\obj\Debug\apCaesarsCipher.csproj.AssemblyReference.cache
+Z:\GITHUB\MeusProjetos\Caesar-Cipher-Encoder-Decoder\Caesar-Cipher-Encoder-Decoder\apCaesarsCipher\apCaesarsCipher\obj\Debug\apCaesarsCipher.csproj.SuggestedBindingRedirects.cache
+Z:\GITHUB\MeusProjetos\Caesar-Cipher-Encoder-Decoder\Caesar-Cipher-Encoder-Decoder\apCaesarsCipher\apCaesarsCipher\obj\Debug\apCaesarsCipher.frmCifra.resources
+Z:\GITHUB\MeusProjetos\Caesar-Cipher-Encoder-Decoder\Caesar-Cipher-Encoder-Decoder\apCaesarsCipher\apCaesarsCipher\obj\Debug\apCaesarsCipher.Properties.Resources.resources
+Z:\GITHUB\MeusProjetos\Caesar-Cipher-Encoder-Decoder\Caesar-Cipher-Encoder-Decoder\apCaesarsCipher\apCaesarsCipher\obj\Debug\apCaesarsCipher.csproj.GenerateResource.cache
+Z:\GITHUB\MeusProjetos\Caesar-Cipher-Encoder-Decoder\Caesar-Cipher-Encoder-Decoder\apCaesarsCipher\apCaesarsCipher\obj\Debug\apCaesarsCipher.csproj.CoreCompileInputs.cache
+Z:\GITHUB\MeusProjetos\Caesar-Cipher-Encoder-Decoder\Caesar-Cipher-Encoder-Decoder\apCaesarsCipher\apCaesarsCipher\obj\Debug\apCaesarsCipher.exe
+Z:\GITHUB\MeusProjetos\Caesar-Cipher-Encoder-Decoder\Caesar-Cipher-Encoder-Decoder\apCaesarsCipher\apCaesarsCipher\obj\Debug\apCaesarsCipher.pdb

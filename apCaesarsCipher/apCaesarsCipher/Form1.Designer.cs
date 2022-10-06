@@ -30,6 +30,7 @@
         {
             this.tbcCifra = new System.Windows.Forms.TabControl();
             this.tpEnconder = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
             this.lbResult = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnEncode = new System.Windows.Forms.Button();
@@ -38,9 +39,13 @@
             this.txtString = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tpDecoder = new System.Windows.Forms.TabPage();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtEncryptedString = new System.Windows.Forms.TextBox();
+            this.btnDecode = new System.Windows.Forms.Button();
+            this.listResult = new System.Windows.Forms.ListBox();
             this.tbcCifra.SuspendLayout();
             this.tpEnconder.SuspendLayout();
+            this.tpDecoder.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbcCifra
@@ -74,6 +79,18 @@
             this.tpEnconder.Text = "Encoder";
             this.tpEnconder.UseVisualStyleBackColor = true;
             // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.Location = new System.Drawing.Point(6, 266);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(559, 15);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Note: if the string is too long, you can resize the window to see the result bett" +
+    "er";
+            // 
             // lbResult
             // 
             this.lbResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -81,7 +98,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbResult.Location = new System.Drawing.Point(154, 153);
             this.lbResult.Name = "lbResult";
-            this.lbResult.Size = new System.Drawing.Size(371, 123);
+            this.lbResult.Size = new System.Drawing.Size(371, 115);
             this.lbResult.TabIndex = 6;
             this.lbResult.Text = "{ -- }";
             // 
@@ -106,6 +123,7 @@
             // 
             // cbKey
             // 
+            this.cbKey.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbKey.FormattingEnabled = true;
             this.cbKey.Items.AddRange(new object[] {
             "1",
@@ -167,25 +185,56 @@
             // 
             // tpDecoder
             // 
-            this.tpDecoder.Location = new System.Drawing.Point(4, 22);
+            this.tpDecoder.Controls.Add(this.listResult);
+            this.tpDecoder.Controls.Add(this.btnDecode);
+            this.tpDecoder.Controls.Add(this.txtEncryptedString);
+            this.tpDecoder.Controls.Add(this.label5);
+            this.tpDecoder.Location = new System.Drawing.Point(4, 30);
             this.tpDecoder.Name = "tpDecoder";
             this.tpDecoder.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDecoder.Size = new System.Drawing.Size(530, 267);
+            this.tpDecoder.Size = new System.Drawing.Size(576, 301);
             this.tpDecoder.TabIndex = 1;
             this.tpDecoder.Text = "Decoder";
             this.tpDecoder.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // label5
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(21, 52);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(127, 21);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "String to Decode:";
+            // 
+            // txtEncryptedString
+            // 
+            this.txtEncryptedString.Location = new System.Drawing.Point(163, 18);
+            this.txtEncryptedString.Multiline = true;
+            this.txtEncryptedString.Name = "txtEncryptedString";
+            this.txtEncryptedString.Size = new System.Drawing.Size(379, 87);
+            this.txtEncryptedString.TabIndex = 1;
+            // 
+            // btnDecode
+            // 
+            this.btnDecode.Location = new System.Drawing.Point(163, 120);
+            this.btnDecode.Name = "btnDecode";
+            this.btnDecode.Size = new System.Drawing.Size(184, 40);
+            this.btnDecode.TabIndex = 2;
+            this.btnDecode.Text = "Decode String";
+            this.btnDecode.UseVisualStyleBackColor = true;
+            this.btnDecode.Click += new System.EventHandler(this.btnDecode_Click);
+            // 
+            // listResult
+            // 
+            this.listResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.Location = new System.Drawing.Point(6, 266);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(559, 23);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Note: if the string is too long, you can resize the window to see the result bett" +
-    "er";
+            this.listResult.FormattingEnabled = true;
+            this.listResult.ItemHeight = 21;
+            this.listResult.Location = new System.Drawing.Point(25, 175);
+            this.listResult.Name = "listResult";
+            this.listResult.Size = new System.Drawing.Size(517, 109);
+            this.listResult.TabIndex = 3;
             // 
             // frmCifra
             // 
@@ -198,6 +247,8 @@
             this.tbcCifra.ResumeLayout(false);
             this.tpEnconder.ResumeLayout(false);
             this.tpEnconder.PerformLayout();
+            this.tpDecoder.ResumeLayout(false);
+            this.tpDecoder.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -215,6 +266,10 @@
         private System.Windows.Forms.TextBox txtString;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtEncryptedString;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnDecode;
+        private System.Windows.Forms.ListBox listResult;
     }
 }
 

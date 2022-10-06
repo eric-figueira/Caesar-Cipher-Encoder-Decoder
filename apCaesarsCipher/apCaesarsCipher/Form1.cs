@@ -80,5 +80,53 @@ namespace apCaesarsCipher
                     MessageBox.Show("Invalid Key!");
             }
         }
+
+        private void btnDecode_Click(object sender, EventArgs e)
+        {
+            listResult.Items.Clear();
+            string encrypted_string = txtEncryptedString.Text;
+
+            if (encrypted_string == "")
+                MessageBox.Show("Passed Encrypted String Must Be Valid!");
+            else
+            {
+                for (int key = 0; key < 26; key++)
+                {
+                    string ret = "";
+                    foreach (char letter in encrypted_string)
+                    {
+                        if (Char.IsLetter(letter))
+                        {
+                            if (Char.IsLower(letter))
+                            {
+                                string let = Char.ToString(letter);
+                                int alphabet_letter_index = Array.IndexOf(alphabet_lower, let);
+                                int new_index = alphabet_letter_index + key;
+
+                                if (new_index >= alphabet_lower.Length)
+                                    new_index = new_index - alphabet_lower.Length;
+
+                                ret += alphabet_lower[new_index];
+                            }
+                            else
+                            {
+                                string let = Char.ToString(letter);
+                                int alphabet_letter_index = Array.IndexOf(alphabet_upper, let);
+                                int new_index = alphabet_letter_index + key;
+
+                                if (new_index >= alphabet_upper.Length)
+                                    new_index = new_index - alphabet_upper.Length;
+
+                                ret += alphabet_upper[new_index];
+                            }
+                        }
+                        else
+                            ret += letter;
+                    }
+
+                    listResult.Items.Add("Key " + (key + 1) + ": " + ret);
+                }      
+            }
+        }
     }
 }
