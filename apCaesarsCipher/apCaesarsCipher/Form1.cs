@@ -17,6 +17,7 @@ namespace apCaesarsCipher
             InitializeComponent();
         }
 
+        // Arrays that are going to be used to change the letters from the strings
         string[] alphabet_lower = new string[] {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
         string[] alphabet_upper = new string[] {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
 
@@ -90,8 +91,9 @@ namespace apCaesarsCipher
                 MessageBox.Show("Passed Encrypted String Must Be Valid!");
             else
             {
-                for (int key = 0; key < 26; key++)
+                for (int key = 0; key < 26; key++) // Going through every possible key (1-26)
                 {
+                    // Doing the same process of encrypting 
                     string ret = "";
                     foreach (char letter in encrypted_string)
                     {
@@ -124,9 +126,14 @@ namespace apCaesarsCipher
                             ret += letter;
                     }
 
-                    listResult.Items.Add("Key " + (key + 1) + ": " + ret);
+                    listResult.Items.Add("Key " + (key + 1) + ": " + ret); // Add the result to the listbox
                 }      
             }
+        }
+
+        private void lbResult_DoubleClick(object sender, EventArgs e)
+        {
+            Clipboard.SetText(lbResult.Text); // Copy the text from the result label to the clipboard
         }
     }
 }

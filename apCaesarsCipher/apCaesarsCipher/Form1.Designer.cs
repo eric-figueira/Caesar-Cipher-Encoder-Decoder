@@ -39,10 +39,11 @@
             this.txtString = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tpDecoder = new System.Windows.Forms.TabPage();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtEncryptedString = new System.Windows.Forms.TextBox();
-            this.btnDecode = new System.Windows.Forms.Button();
             this.listResult = new System.Windows.Forms.ListBox();
+            this.btnDecode = new System.Windows.Forms.Button();
+            this.txtEncryptedString = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.tbcCifra.SuspendLayout();
             this.tpEnconder.SuspendLayout();
             this.tpDecoder.SuspendLayout();
@@ -58,11 +59,12 @@
             this.tbcCifra.Location = new System.Drawing.Point(12, 12);
             this.tbcCifra.Name = "tbcCifra";
             this.tbcCifra.SelectedIndex = 0;
-            this.tbcCifra.Size = new System.Drawing.Size(584, 335);
+            this.tbcCifra.Size = new System.Drawing.Size(584, 390);
             this.tbcCifra.TabIndex = 0;
             // 
             // tpEnconder
             // 
+            this.tpEnconder.Controls.Add(this.label6);
             this.tpEnconder.Controls.Add(this.label4);
             this.tpEnconder.Controls.Add(this.lbResult);
             this.tpEnconder.Controls.Add(this.label3);
@@ -74,19 +76,18 @@
             this.tpEnconder.Location = new System.Drawing.Point(4, 30);
             this.tpEnconder.Name = "tpEnconder";
             this.tpEnconder.Padding = new System.Windows.Forms.Padding(3);
-            this.tpEnconder.Size = new System.Drawing.Size(576, 301);
+            this.tpEnconder.Size = new System.Drawing.Size(576, 356);
             this.tpEnconder.TabIndex = 0;
             this.tpEnconder.Text = "Encoder";
             this.tpEnconder.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.Location = new System.Drawing.Point(6, 266);
+            this.label4.Location = new System.Drawing.Point(11, 315);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(559, 15);
+            this.label4.Size = new System.Drawing.Size(559, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "Note: if the string is too long, you can resize the window to see the result bett" +
     "er";
@@ -96,11 +97,13 @@
             this.lbResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbResult.BackColor = System.Drawing.Color.Transparent;
             this.lbResult.Location = new System.Drawing.Point(154, 153);
             this.lbResult.Name = "lbResult";
-            this.lbResult.Size = new System.Drawing.Size(371, 115);
+            this.lbResult.Size = new System.Drawing.Size(371, 132);
             this.lbResult.TabIndex = 6;
             this.lbResult.Text = "{ -- }";
+            this.lbResult.DoubleClick += new System.EventHandler(this.lbResult_DoubleClick);
             // 
             // label3
             // 
@@ -192,27 +195,22 @@
             this.tpDecoder.Location = new System.Drawing.Point(4, 30);
             this.tpDecoder.Name = "tpDecoder";
             this.tpDecoder.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDecoder.Size = new System.Drawing.Size(576, 301);
+            this.tpDecoder.Size = new System.Drawing.Size(576, 356);
             this.tpDecoder.TabIndex = 1;
             this.tpDecoder.Text = "Decoder";
             this.tpDecoder.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // listResult
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 52);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(127, 21);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "String to Decode:";
-            // 
-            // txtEncryptedString
-            // 
-            this.txtEncryptedString.Location = new System.Drawing.Point(163, 18);
-            this.txtEncryptedString.Multiline = true;
-            this.txtEncryptedString.Name = "txtEncryptedString";
-            this.txtEncryptedString.Size = new System.Drawing.Size(379, 87);
-            this.txtEncryptedString.TabIndex = 1;
+            this.listResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listResult.FormattingEnabled = true;
+            this.listResult.ItemHeight = 21;
+            this.listResult.Location = new System.Drawing.Point(25, 175);
+            this.listResult.Name = "listResult";
+            this.listResult.Size = new System.Drawing.Size(517, 151);
+            this.listResult.TabIndex = 3;
             // 
             // btnDecode
             // 
@@ -224,22 +222,37 @@
             this.btnDecode.UseVisualStyleBackColor = true;
             this.btnDecode.Click += new System.EventHandler(this.btnDecode_Click);
             // 
-            // listResult
+            // txtEncryptedString
             // 
-            this.listResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtEncryptedString.Location = new System.Drawing.Point(163, 18);
+            this.txtEncryptedString.Multiline = true;
+            this.txtEncryptedString.Name = "txtEncryptedString";
+            this.txtEncryptedString.Size = new System.Drawing.Size(379, 87);
+            this.txtEncryptedString.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(21, 52);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(127, 21);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "String to Decode:";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listResult.FormattingEnabled = true;
-            this.listResult.ItemHeight = 21;
-            this.listResult.Location = new System.Drawing.Point(25, 175);
-            this.listResult.Name = "listResult";
-            this.listResult.Size = new System.Drawing.Size(517, 109);
-            this.listResult.TabIndex = 3;
+            this.label6.Location = new System.Drawing.Point(11, 285);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(300, 20);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Note: Double click the text to copy it";
             // 
             // frmCifra
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(608, 357);
+            this.ClientSize = new System.Drawing.Size(608, 412);
             this.Controls.Add(this.tbcCifra);
             this.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmCifra";
@@ -270,6 +283,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnDecode;
         private System.Windows.Forms.ListBox listResult;
+        private System.Windows.Forms.Label label6;
     }
 }
 
